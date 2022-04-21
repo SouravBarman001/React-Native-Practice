@@ -1,44 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Button, Alert } from 'react-native';
+import { StyleSheet, Text, View ,Button, Alert, ActivityIndicator,ScrollView } from 'react-native';
 
-// const Name=(props)=>{
-// return (
 
-//   <View>
-//       <Text>Name:{props.name}  </Text>
-//       <Text>Name:{props.age}  </Text>
-
-//   </View>
-
-// )
-// }
-
-const buttonClick=()=>
-  Alert.alert(
-    'Alert Title',
-    'This is Alert Message',
-    [
-      {
-        text:'Ask me later',
-        onPress:()=>console.log('ask me later')
-      },
-      {
-        text:'Cancel',
-        onPress:()=>console.log('Cancel')
-      },
-      {
-        text:'Ok',
-        onPress:()=>console.log('Ok')
-      }
-    ]
-   )
+const Data =[
+ 
+  {id: '1',name: 'souarv'},
+  {id: '2',name: 'rana'},
+  {id: '3',name: 'razu'},
+  {id: '4',name: 'nayeem'},
+  {id: '5',name: 'alomgir'},
+  {id: '6',name: 'alif'},
+  {id: '7',name: 'nadia'},
+  {id: '8',name: 'mitu'},
+  {id: '8',name: 'ripa'},
+  {id: '9',name: 'rintu'},
+  {id: '10',name: 'sunan'},
+  {id: '12',name: 'redwan'},
+  {id: '13',name: 'tazbir'},
+  {id: '13',name: 'tazbir'},
+  {id: '13',name: 'tazbir'},
+  {id: '13',name: 'tazbir'},
+  {id: '13',name: 'tazbir'}
+]
 
 
 export default function App() {
   return (
     <View style={styles.container}>
      
-      <Button title="Click me" onPress={() => buttonClick()} />
+     <ScrollView showsVerticalScrollIndicator={false}>
+
+     {
+       Data.map(item =><Text style={{fontSize:40}}>{item.name}</Text>)
+     }
+     </ScrollView>
 
     <StatusBar style="auto" />
     </View>

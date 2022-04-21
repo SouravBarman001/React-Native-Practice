@@ -1,26 +1,46 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View ,Button, Alert } from 'react-native';
 
-const Name=(props)=>{
-return (
+// const Name=(props)=>{
+// return (
 
-  <View>
-      <Text>Name:{props.name}  </Text>
-      <Text>Name:{props.age}  </Text>
+//   <View>
+//       <Text>Name:{props.name}  </Text>
+//       <Text>Name:{props.age}  </Text>
 
-  </View>
+//   </View>
 
-)
-}
+// )
+// }
+
+const buttonClick=()=>
+  Alert.alert(
+    'Alert Title',
+    'This is Alert Message',
+    [
+      {
+        text:'Ask me later',
+        onPress:()=>console.log('ask me later')
+      },
+      {
+        text:'Cancel',
+        onPress:()=>console.log('Cancel')
+      },
+      {
+        text:'Ok',
+        onPress:()=>console.log('Ok')
+      }
+    ]
+   )
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Name  name="Sourav" age="29" ></Name>
-      <Text style={textColor.baseText} onPress={()=>{console.log("click sourav")}} >click button</Text>
-      <Text numberOfLines={3} selectable style={[textColor.baseText,textColor.titleText,back.backColor]}>Flex Dimensions
-       Use flex in a component's style to have the component expand and shrink dynamically based on available space. Normally you will use flex: 1, which tells a component to fill all available space, shared evenly amongst other components with the same parent. The larger the flex given, the higher the ratio of space a component will take compared to its siblings.</Text>
-      <StatusBar style="auto" />
+     
+      <Button title="Click me" onPress={() => buttonClick()} />
+
+    <StatusBar style="auto" />
     </View>
   );
 }
@@ -34,20 +54,3 @@ const styles = StyleSheet.create({
   },
 });
 
-const textColor = StyleSheet.create({
-  baseText: {
-    fontFamily: "Arial",
-    color:'red'
-  },
-  titleText: {
-    fontWeight: "bold"
-  }
-});
-
-
-const back = StyleSheet.create({
-    backColor: {
-      backgroundColor:'pink'
-    }
-
-});

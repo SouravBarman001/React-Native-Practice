@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Button, Alert, ActivityIndicator,ScrollView, FlatList } from 'react-native';
+import { StyleSheet, Text, View ,Button, Alert, ActivityIndicator,ScrollView, FlatList, TouchableOpacity } from 'react-native';
 
 
 const Data =[
@@ -25,12 +25,15 @@ const Data =[
 
 
 export default function App() {
-  return (
+  return ( 
     <View style={styles.container}>
      
       <FlatList
         data = {Data}
-        renderItem = {({ item })=> <Text style={{fontSize:20,marginTop:60,padding:20}}>{item.name} </Text>}
+        renderItem = {({ item })=> <TouchableOpacity onPress={()=>{console.log("item clickd",item.id)}}>
+
+        <Text style={{fontSize:20,marginTop:60,padding:20}}>{item.name} </Text>
+        </TouchableOpacity>}
         keyExtractor={item=>console.log(item.id)}
         showsVerticalScrollIndicator={false}
         onRefresh={()=>{console.log("Refreshing")}}

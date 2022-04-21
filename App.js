@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Button, Alert, ActivityIndicator,ScrollView } from 'react-native';
+import { StyleSheet, Text, View ,Button, Alert, ActivityIndicator,ScrollView, FlatList } from 'react-native';
 
 
 const Data =[
@@ -17,10 +17,10 @@ const Data =[
   {id: '10',name: 'sunan'},
   {id: '12',name: 'redwan'},
   {id: '13',name: 'tazbir'},
-  {id: '13',name: 'tazbir'},
-  {id: '13',name: 'tazbir'},
-  {id: '13',name: 'tazbir'},
-  {id: '13',name: 'tazbir'}
+  {id: '14',name: 'tazbir'},
+  {id: '15',name: 'tazbir'},
+  {id: '16',name: 'tazbir'},
+  {id: '17',name: 'tazbir'}
 ]
 
 
@@ -28,14 +28,17 @@ export default function App() {
   return (
     <View style={styles.container}>
      
-     <ScrollView showsVerticalScrollIndicator={false}>
+      <FlatList
+        data = {Data}
+        renderItem = {({ item })=> <Text style={{fontSize:20,marginTop:60,padding:20}}>{item.name} </Text>}
+        keyExtractor={item=>console.log(item.id)}
+        showsVerticalScrollIndicator={false}
+        onRefresh={()=>{console.log("Refreshing")}}
+        refreshing={false}
 
-     {
-       Data.map(item =><Text style={{fontSize:40}}>{item.name}</Text>)
-     }
-     </ScrollView>
-
-    <StatusBar style="auto" />
+        // horizontal
+        // showVerticalScrollIndicator={true}
+      />
     </View>
   );
 }

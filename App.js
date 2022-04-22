@@ -43,7 +43,7 @@ export default function App() {
         // showVerticalScrollIndicator={true}
       /> */}
 
-    <Image source={require('./assets/sourav2.jpg')} 
+    <Image source={{uri:'https://icon-library.com/images/android-app-icon-png/android-app-icon-png-27.jpg'}} 
       style={{width:200, height:200}}
     />
 

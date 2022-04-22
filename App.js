@@ -26,30 +26,56 @@ import { StyleSheet, Text, View ,Button, Alert, ActivityIndicator,ScrollView, Fl
 
 export default function App() {
   return ( 
-    <View style={styles.container}>
+    // <View style={styles.container}>
      
-      {/* <FlatList
-        data = {Data}
-        renderItem = {({ item })=> <TouchableOpacity onPress={()=>{console.log("item clickd",item.id)}}>
+    //   {/* <FlatList
+    //     data = {Data}
+    //     renderItem = {({ item })=> <TouchableOpacity onPress={()=>{console.log("item clickd",item.id)}}>
 
-        <Text style={{fontSize:20,marginTop:60,padding:20}}>{item.name} </Text>
-        </TouchableOpacity>}
-        keyExtractor={item=>console.log(item.id)}
-        showsVerticalScrollIndicator={false}
-        onRefresh={()=>{console.log("Refreshing")}}
-        refreshing={false}
+    //     <Text style={{fontSize:20,marginTop:60,padding:20}}>{item.name} </Text>
+    //     </TouchableOpacity>}
+    //     keyExtractor={item=>console.log(item.id)}
+    //     showsVerticalScrollIndicator={false}
+    //     onRefresh={()=>{console.log("Refreshing")}}
+    //     refreshing={false}
 
-        // horizontal
-        // showVerticalScrollIndicator={true}
-      /> */}
+    //     // horizontal
+    //     // showVerticalScrollIndicator={true}
+    //   /> */}
 
-    <Image source={{uri:'https://icon-library.com/images/android-app-icon-png/android-app-icon-png-27.jpg'}} 
-      style={{width:200, height:200}}
-    />
+    // <Image source={{uri:'https://icon-library.com/images/android-app-icon-png/android-app-icon-png-27.jpg'}} 
+    //   style={{width:200, height:200}}
+    // />
 
 
 
+    // </View>
+
+    <>
+    
+    {/* <View style={{flex:1,backgroundColor:'grey'}}>
+
+     <View style={{flex:1,backgroundColor:'red'}}>
+
+       <Text style={{fontSize:20}}>1</Text>
+     </View>
+
+     <View style={{flex:1,backgroundColor:'blue'}}>
+
+<Text style={{fontSize:20}}>2</Text>
+</View>
+
+    </View> */}
+
+    <View style={{flex:1,backgroundColor:'grey',justifyContent: 'center'}}>
+      <View style={{flex:1,backgroundColor:'red',width:100,height:50}}></View>
+      <View style={{flex:1,backgroundColor:'blue',width:100,height:50}}></View>
+      <View style={{flex:1,backgroundColor:'green',width:100,height:50}}></View>
     </View>
+    
+    
+    </>
+
   );
 }
 

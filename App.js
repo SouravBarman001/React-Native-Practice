@@ -1,34 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Button, Alert, ActivityIndicator,ScrollView, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View ,Button, Alert, ActivityIndicator,ScrollView, FlatList, TouchableOpacity,Image } from 'react-native';
 
 
-const Data =[
+// const Data =[
  
-  {id: '1',name: 'souarv'},
-  {id: '2',name: 'rana'},
-  {id: '3',name: 'razu'},
-  {id: '4',name: 'nayeem'},
-  {id: '5',name: 'alomgir'},
-  {id: '6',name: 'alif'},
-  {id: '7',name: 'nadia'},
-  {id: '8',name: 'mitu'},
-  {id: '8',name: 'ripa'},
-  {id: '9',name: 'rintu'},
-  {id: '10',name: 'sunan'},
-  {id: '12',name: 'redwan'},
-  {id: '13',name: 'tazbir'},
-  {id: '14',name: 'tazbir'},
-  {id: '15',name: 'tazbir'},
-  {id: '16',name: 'tazbir'},
-  {id: '17',name: 'tazbir'}
-]
+//   {id: '1',name: 'souarv'},
+//   {id: '2',name: 'rana'},
+//   {id: '3',name: 'razu'},
+//   {id: '4',name: 'nayeem'},
+//   {id: '5',name: 'alomgir'},
+//   {id: '6',name: 'alif'},
+//   {id: '7',name: 'nadia'},
+//   {id: '8',name: 'mitu'},
+//   {id: '8',name: 'ripa'},
+//   {id: '9',name: 'rintu'},
+//   {id: '10',name: 'sunan'},
+//   {id: '12',name: 'redwan'},
+//   {id: '13',name: 'tazbir'},
+//   {id: '14',name: 'tazbir'},
+//   {id: '15',name: 'tazbir'},
+//   {id: '16',name: 'tazbir'},
+//   {id: '17',name: 'tazbir'}
+// ]
 
 
 export default function App() {
   return ( 
     <View style={styles.container}>
      
-      <FlatList
+      {/* <FlatList
         data = {Data}
         renderItem = {({ item })=> <TouchableOpacity onPress={()=>{console.log("item clickd",item.id)}}>
 
@@ -41,7 +41,14 @@ export default function App() {
 
         // horizontal
         // showVerticalScrollIndicator={true}
-      />
+      /> */}
+
+    <Image source={require('./assets/sourav2.jpg')} 
+      style={{width:200, height:200}}
+    />
+
+
+
     </View>
   );
 }
